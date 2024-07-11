@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+:root{
+    --BUTTON-TEXT-SIZE: clamp(15px, 1.5rem, 25px);
+    --BORDER: 2px solid rgb(53, 164, 255);
+    --BUTTON-BACKGROUND-COLOR: rgb(53, 164, 255);
+    --BUTTON-BACKGROUND-COLOR-HOVER: rgb(0, 140, 255);
+    --FAILED-COLOR: red;
+    --SUCCESS-COLOR: green;
+    --FAILED-BACKGROUND-COLOR: rgb(255, 188, 188);
+    --SUCCESS-BACKGROUND-COLOR: rgb(200, 255, 195);
+}
+
+body{
+    background-image: url(background.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1{
+    font-size: 3rem;
+    color: var(--BUTTON-BACKGROUND-COLOR);
+    text-align: center;
+}
+
+.container{
+    height: clamp(500px, 70vh, 800px);
+    background-color: rgba(255, 255, 255, 1);
+    width: clamp(300px, 35vw, 700px);
+    border: var(--BORDER);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.start{
+    height: 60px;
+    width: clamp(170px, 35%, 1000px);
+    border-radius: 20px;
+    background-color: var(--BUTTON-BACKGROUND-COLOR);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--BUTTON-TEXT-SIZE);
+    color: whitesmoke;
+    font-weight: 700;
+    text-wrap: nowrap;
+    cursor: pointer;
+
+}
+
+.status{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.hint{
+    width: 50%;
+    height: 30px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--FAILED-BACKGROUND-COLOR);
+    color: var(--FAILED-COLOR);
+    border-radius: 5px;
+}
+
+.input{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputBox{
+    width: 75%;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgba(248, 248, 248, 0);
+    border: 3px solid black;
+    padding: 20px;
+    font-size: var(--BUTTON-TEXT-SIZE);
+    color: black;
+}
+
+.inputBox:hover,
+.inputBox:focus{
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+    outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.inputButton{
+    outline: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--BUTTON-BACKGROUND-COLOR);
+    width: 130px;
+    max-width: 150px;
+    height: 40px;
+    margin: 30px;
+    border-radius: 20px;
+    border: none;
+    font-size: var(--BUTTON-TEXT-SIZE);
+    font-weight: 700;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.success{
+    width: clamp(240px, 80%, 560px);
+    height: clamp(225px, 45%, 360px);
+    background-color: var(--SUCCESS-BACKGROUND-COLOR);
+    color: var(--SUCCESS-COLOR);
+    border-radius: 10px;
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.failed{
+    width: clamp(240px, 80%, 560px);
+    height: clamp(225px, 45%, 360px);
+    background-color: var(--FAILED-BACKGROUND-COLOR);
+    color: var(--FAILED-COLOR);
+    border-radius: 10px;
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h3{
+    text-align: center;
+}
+
+.result p,
+.failed p{
+    margin: 10px;
+}
+
+.note{
+    width: 75%;
+    text-align: center;
+    margin: 10px;
+    font-weight: 500;
+    color: rgb(99, 99, 99);
+}
+
+.restart{
+    height: 60px;
+    width: clamp(170px, 35%, 1000px);
+    border-radius: 20px;
+    background-color: var(--BUTTON-BACKGROUND-COLOR);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--BUTTON-TEXT-SIZE);
+    color: whitesmoke;
+    font-weight: 700;
+    text-wrap: nowrap;
+    cursor: pointer;
+}
+
+.restart,
+.start,
+.inputButton{
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.restart:hover,
+.start:hover,
+.inputButton:hover{
+    background-color: var(--BUTTON-BACKGROUND-COLOR-HOVER);
+}

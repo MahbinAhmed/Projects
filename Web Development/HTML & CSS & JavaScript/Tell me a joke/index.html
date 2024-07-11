@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Tell me a joke</title>
+</head>
+<body>
+    <main class="mainPage">
+        <header class="pageHeader">
+            <i class="fa fa-bars" onclick="showNav()"></i>
+            <h1>Joke Lagbe?</h1>
+            <div></div>
+        </header>
+        <main class="mainContent">
+            <nav class="settingsContainer">
+                <h2>Settings</h2>
+                <form action="" method="get">
+                    <div class="categoryContainer">
+                        <h3>Joke category</h3>
+                        <label for="any">Any</label>
+                        <input type="radio" name="category" id="any" value="Any" checked>
+                        <label for="custom">Custom</label>
+                        <input type="radio" name="category" id="custom" value="custom">
+            
+                        <div class="customOptionsDiv">
+                            <label for="programming">Programming</label>
+                            <input type="checkbox" name="customOptionsName" id="programming" value="Programming" checked>
+                            <label for="misc">Misc</label>
+                            <input type="checkbox" name="customOptionsName" id="misc" value="Miscellaneous" checked>
+                            <label for="dark">Dark</label>
+                            <input type="checkbox" name="customOptionsName" id="dark" value="Dark" checked>
+                            <label for="pun">Pun</label>
+                            <input type="checkbox" name="customOptionsName" id="pun" value="Pun" checked>
+                            <label for="spooky">Spooky</label>
+                            <input type="checkbox" name="customOptionsName" id="spooky" value="Spooky" checked>
+                            <label for="christmas">Christmas</label>
+                            <input type="checkbox" name="customOptionsName" id="christmas" value="Christmas" checked>
+                            <br>
+                            <p>NB: At least select one. Otherwise, the system will consider all selected</p>
+                        </div>
+                    </div>
+            
+                    <div class="blacklistContainer">
+                        <h3>Category(ies) to blacklist (Optional)</h3>
+                        <div class="blacklistDiv">
+                            <label for="nsfw">NSFW</label>
+                            <input type="checkbox" name="blacklistName" id="nsfw" value="nsfw">
+                            <label for="religious">Religious</label>
+                            <input type="checkbox" name="blacklistName" id="religious" value="religious">
+                            <label for="political">Political</label>
+                            <input type="checkbox" name="blacklistName" id="political" value="political">
+                            <label for="racist">Racist</label>
+                            <input type="checkbox" name="blacklistName" id="racist" value="racist">
+                            <label for="sexist">Sexist</label>
+                            <input type="checkbox" name="blacklistName" id="sexist" value="sexist">
+                            <label for="explicit">Explicit</label>
+                            <input type="checkbox" name="blacklistName" id="explicit" value="explicit">
+                        </div>
+                    </div>
+                    <div class="typeContainer">
+                        <h3>Joke type</h3>
+                        <div class="typeDiv">
+                            <label for="single">Single</label>
+                            <input type="checkbox" name="typeName" id="single" value="single" checked>
+                            <label for="twoPart">Two part</label>
+                            <input type="checkbox" name="typeName" id="twoPart" value="twopart" checked>
+                            <br>
+                            <p>NB: At least select one. Otherwise, the system will consider all selected</p>
+                        </div>
+                    </div>
+                    <!-- <button id="getUrl" onclick="getUrl()">URL</button>
+                    <button id="getBlacklist" onclick="getBlacklist()">Blacklist</button>
+                    <button id="getType" onclick="getType()">Type</button>
+                    <button id="getJoke" onclick="getJoke()">Joke</button> -->
+                </form>
+            </nav>
+            <div class="container1"></div>
+            <div class="container2"></div>
+        </main>
+    </main>
+</body>
+<script src="main.js"></script>
+</html>

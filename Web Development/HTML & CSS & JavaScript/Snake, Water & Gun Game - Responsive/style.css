@@ -1,0 +1,258 @@
+@font-face { font-family: 'CuteDino'; src: url('/fonts/Cute\ Dino.ttf'); } 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'CuteDino', sans-serif;
+}
+
+/* VARIABLES */
+:root{
+    --YELLOW-BACKGROUND: #F6E013;
+    --ORANGE-BUTTON: #F66F00;
+    --ORANGE-BUTTON-HOVER: #f64600;
+    --VIOLET-BACKGROUND: #5A46DE;
+    --BLACK-TEXT: #000000;
+}
+
+/* LAYOUT */
+body{
+    min-height: 100vh;
+    background-color: var(--VIOLET-BACKGROUND);
+}
+
+/* HEADER */
+header{
+    background-color: var(--YELLOW-BACKGROUND);
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTENT */
+main{
+    min-height: 70vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 92%;
+    max-width: 26.75em;
+    height: 15em;
+    background-color: var(--YELLOW-BACKGROUND);
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+    padding: 0.5em 0.75em;
+    margin: 0.5em;
+    background-color: var(--ORANGE-BUTTON);
+    border-radius: 3em;
+    font-size: 1.5rem;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+    border: none;
+}
+
+.button:hover,
+.button:focus{
+    background-color: var(--ORANGE-BUTTON-HOVER);
+}
+
+/* ROUND RESULT */
+.roundResult{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    justify-content: center;
+}
+
+.roundResult h2{
+    padding: 0.2em;
+}
+
+/* SCORE BOARD */
+.scoreBoard{
+    width: 92%;
+    max-width: 26.75em;
+    margin: 2em;
+    background-color: var(--YELLOW-BACKGROUND);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    justify-content: space-between;
+}
+
+.scoreBoard h2{
+    color: var(--BLACK-TEXT);
+}
+
+.scoreBoard p{
+    font-size: 1.35rem;
+    margin: 4em 0;
+    text-align: center;
+}
+
+/* GAME RESULT */
+.gameResult{
+    background-color: var(--YELLOW-BACKGROUND);
+    width: 92%;
+    max-width: 26.75em;
+    margin: 2em;
+    border-radius: 0.5rem;
+    padding: 2em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+}
+
+.gameResult h2{
+    color: var(--ORANGE-BUTTON);
+}
+
+.gameResult p{
+    font-size: 1.35rem;
+    text-align: center;
+}
+
+.gameResult .button{
+    margin: 1em;
+}
+
+/* OPTIONS */
+.playground{
+    display: flex;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1em;
+    align-items: center;
+}
+
+img{
+    width: 30%;
+    height: 30%;
+}
+
+.snake,
+.water,
+.gun{
+    width: 7em;
+    height: 7em;
+    background-color: var(--ORANGE-BUTTON);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+    margin: 1em;
+}
+
+/* HEADERS */
+h1{
+    font-size: 2.5rem;
+    margin: 0.4em;
+    text-align: center;
+}
+
+h2{
+    margin: 0.2em 0;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--YELLOW-BACKGROUND);
+}
+
+h3{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* SPECIAL CLASSES */
+.select{
+    display: none;
+}
+
+.selected{
+    border: 5px solid var(--YELLOW-BACKGROUND);
+    background-color: var(--ORANGE-BUTTON-HOVER);
+}
+
+.choosing{
+    border: 5px solid var(--YELLOW-BACKGROUND);
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 492px) {
+    h2{
+        font-size: 2.3rem;
+    }
+
+    .container{
+        height: 20em;
+    }
+}
+
+@media screen and (min-width: 859px) {
+    .game{
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+    }
+
+    .container{
+        height: 25em;
+    }
+
+    .options{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .snake,
+    .water,
+    .gun{
+        width: 8em;
+        height: 8em;
+    }
+
+    .scoreBoard{
+        padding: 5em 1em;
+    }
+
+    .gameResult{
+        padding: 4em 1em;
+    }
+
+    h2{
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .snake,
+    .water,
+    .gun{
+        width: 9em;
+        height: 9em;
+    }
+}

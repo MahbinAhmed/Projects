@@ -1,0 +1,269 @@
+/* UNIVERSAL SELECTOR */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+    background-color: black;
+}
+
+/* HEADER */
+header{    
+    background-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.2), black), url("img/header-image.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 1080px;
+}
+
+/* NAVIGATION BAR */
+.navbar{
+    max-width: 1400px;
+    width: 60%;
+    margin: auto;
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar img{
+    display: block;
+    width: 13%;
+    min-width: 80px;
+    height: auto;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: red;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover{
+    background-color: rgb(172, 4, 4);
+}
+
+/* FRONT PAGE */
+.top_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4.5rem auto;
+    text-align: center;
+    padding: 15rem;
+}
+
+.top_section h1{
+    font-size: 4rem;
+    line-height: 80px;
+}
+
+.top_section p{
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+.top_section small{
+    font-size: 1.2rem;
+    margin: 1rem;
+}
+
+.email_submit{
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.email_submit input{
+    width: 30%;
+    min-width: 400px;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 60px;
+    border: 1px solid rgba(245, 245, 245, 0.5);
+    border-radius: 5px;
+    outline-offset: 2px;
+    padding-left: 20px;
+    color: whitesmoke;
+    font-size: 1rem;
+}
+
+.email_submit input::placeholder{
+    color: whitesmoke;
+    font-size: 1rem;
+}
+
+.email_submit a{
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: red;
+    font-size: 1.5rem;
+    padding: 16px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-left: 8px;
+    transition: background-color 0.3s;
+}
+
+.email_submit a:hover{
+    background-color: rgb(172, 4, 4);
+}
+
+/* FEATURES */
+.features{
+    margin: 2rem auto;
+    padding: 5rem 12rem;
+    border-top: 5px solid grey;
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: center;
+}
+
+.features h1{
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.features .text{
+    max-width: 550px;
+    white-space: wrap;
+}
+
+.features p{
+    font-size: 1.5rem;
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+}
+
+.features img{
+    width: 70%;
+    /* min-width: 300px; */
+    margin: 1rem auto;
+    height: auto;
+}
+
+/* FAQ */
+.faq{
+    padding: 5rem 20% 2rem;
+    margin: 5rem auto 0;
+    border-top: 5px solid grey;
+}
+
+.faq h1{
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.faq ul{
+    list-style-type: none;
+}
+
+.faq li{
+    margin-bottom: 0.5rem;
+}
+
+.faq label{
+    padding: 0.8rem;
+    background-color: rgb(45, 45, 45);
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+
+.faq label::after{
+    content: "+";
+    font-size: 2rem;
+    transition: all 0.5s;
+}
+
+.faq input[type="radio"]{
+    display: none;
+}
+
+.faq p{
+    background-color: rgb(45, 45, 45);
+    margin-top: 3px;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0px 30px;
+    transition: padding 0.5s, max-height 0.5s;
+    font-size: 1.4rem;
+}
+
+.faq input[type="radio"]:checked+label+.content{
+    max-height: 600px;
+    padding: 20px 30px;
+}
+
+.faq input[type="radio"]:checked+label::after{
+    transform: rotateZ(135deg);
+}
+
+.bottom_section small{
+    font-size: 1.2rem;
+    margin: 1rem auto;
+    display: block;
+    text-align: center;
+}
+
+/* FOOTER*/
+footer{
+    padding: 5rem 20%;
+    margin: 5rem auto 0;
+    border-top: 5px solid grey;
+}
+
+.items{
+    margin-bottom: 1rem;
+}
+
+.items a{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.single_line{
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.multi_line{
+    display: flex;
+    justify-content: space-between;
+}
+
+.first_column,
+.second_column,
+.third_column{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    row-gap: 1.2rem;
+}
+
+.language{
+    background-color: black;
+    color: whitesmoke;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 5px;
+    outline-offset: 3px;
+    margin: 0.5rem 0 1.5rem;
+}
+
+footer p{
+    color: rgba(255, 255, 255, 0.7);
+}

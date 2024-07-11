@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+/* SETTINGS */
+.settingsContainer{
+    /* width: 25%; */
+    /* height: 100%; */
+    background-color: red;
+    display: none;
+}
+
+.settingsContainer h2{
+    text-align: center;
+    font-size: 1.7rem;
+    margin: 0.5rem;
+    display: none;
+}
+
+.settingsContainer h3{
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+
+
+/* MAIN PAGE */
+.mainPage{
+    width: 100%;
+    background-color: rgb(255, 254, 252);
+}
+
+.pageHeader{
+    min-height: 50px;
+    height: 3.5em;
+    max-height: 75px;
+    width: 100%;
+    background-color: yellow;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pageHeader h1{
+    font-size: 2.2rem;
+    text-wrap: nowrap;
+}
+
+.pageHeader i{
+    margin: 0.5em;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* INPUT */
+input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+input ~ .checkmark {
+    background-color: #ccc;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="MAM">
+    <link rel="stylesheet" href="style.css">
+    <title>Snake, Water & Gun</title>
+</head>
+<body>
+    <header>
+        <h1>SNAKE, WATER & GUN</h1>
+    </header>
+    <main>
+        <div class="container" id="container">
+            <button class="button" id="action">START</button>
+        </div>
+        <div class="game" id="game">
+            <div class="roundResult" id="roundResult">
+                <h2 id="roundResultText"></h2>
+                <button class="button" id="next">NEXT</button>
+            </div>
+            <div class="playground-header">
+                <div class="playground" id="userPlayground">
+                    <h2>Select your choice</h2>
+                    <div class="options">
+                        <div class="snake box" id="snake" tabindex="1"><img src="icons/snake.png" alt="snake"></div>
+                        <div class="water box" id="water" tabindex="2"><img src="icons/water.png" alt="water"></div>
+                        <div class="gun box" id="gun" tabindex="3"><img src="icons/gun.png" alt="gun"></div>
+                    </div>
+                    <button class="button select" id="select">SELECT</button>
+                </div>
+                <div class="playground" id="computerPlayground">
+                    <h2>Computer is choosing...</h2>
+                    <div class="options">
+                        <div class="snake box" id="snake" tabindex="1"><img src="icons/snake.png" alt="snake"></div>
+                        <div class="water box" id="water" tabindex="2"><img src="icons/water.png" alt="water"></div>
+                        <div class="gun box" id="gun" tabindex="3"><img src="icons/gun.png" alt="gun"></div>
+                    </div>
+                    <button class="button select" id="select">SELECT</button>
+                </div>
+            </div>
+            <div class="scoreBoard" id="scoreBoard"></div>
+        </div>
+        <div class="gameResult" id="gameResult">
+            <div id="gameResultText"></div>
+            <button class="button" id="startNew">Start New</button>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
